@@ -42,3 +42,13 @@ def test_parse_subject():
 	obj_sent = Sentence(subj, verb, obj) #This is the first instance of Sentence()
 	assert_equal(parser.parse_subject(word_list, subj), obj_sent)
 	#this is the second instance of Sentence() that I need to compare to the first one.
+
+def test_parse_sentence():
+	word_list = lexicon2.scan('kill north the')
+	subj = ('noun', 'player')
+	verb = ('verb', 'kill')
+	obj = ('direction', 'north')
+	obj_sent = Sentence(subj, verb, obj)
+	assert_equal(parser.parse_sentence(word_list), obj_sent)
+	assert_raises(parser.ParserError, parser.parse_sentence, word_list)
+
