@@ -56,7 +56,10 @@ def test_sentence():
 	subject = ('noun', 'player')
 	verb = ('verb', 'kill')
 	obj = ('direction', 'north')
+	sent = Sentence()
 	compare = Sentence(subject, verb, obj)
 	assert_equal(parser.Sentence(subject, verb, obj), compare)
+	assert_equal(sent.subject, (subkect[1])
+	
 
 
