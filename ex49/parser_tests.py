@@ -52,3 +52,11 @@ def test_parse_sentence():
 	assert_equal(parser.parse_sentence(word_list), obj_sent)
 	assert_raises(parser.ParserError, parser.parse_sentence, word_list)
 
+def test_sentence():
+	subject = ('noun', 'player')
+	verb = ('verb', 'kill')
+	obj = ('direction', 'north')
+	compare = Sentence(subject, verb, obj)
+	assert_equal(parser.Sentence(subject, verb, obj), compare)
+
+
